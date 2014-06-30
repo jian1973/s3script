@@ -1,0 +1,1 @@
+s3jstest=js/s3jstest.s3js

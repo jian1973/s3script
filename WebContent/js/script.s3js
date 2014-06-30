@@ -1,0 +1,13 @@
+[template]
+name=test script
+funcname=getScript
+funcparam=aP1,aP2
+namespace=s3jstest
+package=s3test.base
+[body]
+aa<s3:js script="var aa=2;var bbb=3;">bb<s3:js script="aa=2;bbb=3;">cc
+<%
+  aa=1;bbb=5;
+  if (aP1==aa && aP2==bbb) return "ok"; 
+%>
+bbb
