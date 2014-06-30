@@ -1,0 +1,26 @@
+[template]
+name=备注测试
+funcname=getComment
+funcparam=
+namespace=s3jstest
+package=s3test.base
+[body]
+begin output
+<!--  comment,not generate js code
+<Table border="1" >
+<tr>
+   <th>property</th> 
+   <th>value</th>
+</tr>
+<s3:foreach item="var fItem"   
+   array="aData" 
+>
+<tr>
+  <td>${h:fItem}</td>
+  <td>${h:aData[fItem]}</td>
+</tr>
+</s3:foreach>
+
+</Table>
+-->
+end output

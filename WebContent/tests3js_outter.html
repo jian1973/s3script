@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TestJs</title>
+<script src="s3utils.js" type="text/javascript"></script>
+<s3:import   ></s3:import>
+<s3:initfunc function="testinit" parameters="aList,aData"></s3:initfunc>
+<script type="text/javascript">
+	var fList;
+	var fData = {};
+	fData.id = 1;
+	fData.name = "songjian";
+	fData.age = 40.5;
+	fList = [ "\"<script>alert(\"\");<\/script>Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+</script>
+</head>
+<body onload="testinit(fList,fData);">
+	<form name="TestForm" action="#" >
+			<s3:dom id="out1" function="getSwicthTest@s3jstest" parameters="3-1,aList" />
+			</br>
+			<s3:dom id="out2" function="getIf@s3jstest" parameters="1" />
+			</br>
+			<s3:dom id="out3" function="getFor@s3jstest" parameters="aList" />
+			</br>
+			<s3:dom id="out4" function="getForeach@s3jstest" parameters="aData" />
+			<s3:dom id="out5" function="getComment@s3jstest" parameters="" />
+			<s3:dom id="out6" function="getCall@s3jstest" parameters="1-1,aList" />
+			<s3:dom id="out7" function="getScript@s3jstest" parameters="2,5" />
+	</form>
+</body>
+</html>

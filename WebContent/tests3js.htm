@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TestJs</title>
+<script src="s3utils.js" type="text/javascript"></script>
+<s3:import   ></s3:import>
+<script type="text/javascript">
+
+function init(){
+  var fFrom;
+  fForm=document.TestForm;
+  var fdiv;
+  fdiv=document.getElementById("outdiv");
+  var ftext;
+  var fList;
+  var fData={};
+  fData.id=1;
+  fData.name="songjian";
+  fData.age=40.5;
+  fList=["\"<script>alert(\"\");<\/script>Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  ftext=<s3:call function="getSwicthTest@s3jstest" parameters="3-1,fList">;
+  ftext+="</br>";
+  ftext+=<s3:call function="getIf@s3jstest" parameters="1">+"</br>"+<s3:call function="getFor@s3jstest" parameters="fList">;
+  ftext+="</br>";
+  ftext+=<s3:call function="getForeach@s3jstest" parameters="fData">;
+  ftext+="</br>";
+  ftext+=<s3:call function="getComment@s3jstest" parameters="">;
+  ftext+="</br>";
+  ftext+=<s3:call function="getCall@s3jstest" parameters="1-1,fList">;
+  ftext+="</br>";
+  ftext+=<s3:call function="getScript@s3jstest" parameters="2,5">;
+  ftext+="</br>";
+  
+  fdiv.innerHTML=ftext;
+}
+</script>
+</head>
+<body onload="init();">
+	<form name="TestForm" action="#" >
+	<div id="outdiv">
+	</div>
+	</form>
+</body>
+</html>

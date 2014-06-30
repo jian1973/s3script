@@ -1,0 +1,12 @@
+[template]
+name=test for loop
+funcname=getFor
+funcparam=aList
+namespace=s3jstest
+package=s3test.base
+[body]
+<s3:for start="var i=0" test="i<aList.length" step="i++">
+<!--   <input name="a" value="${v:aList[i]}"></br> -->
+   <input name="a${v:i}" value="${v:aList[i]}"></br>
+   
+</s3:for>

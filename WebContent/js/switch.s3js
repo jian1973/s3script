@@ -1,0 +1,24 @@
+[template]
+name=test swicth
+funcname=getSwicthTest
+funcparam=aDay,aShowList
+skippushln=true
+trim=true
+namespace=s3jstest
+package=s3test.base
+[body]
+<s3:switch value="aDay" > 
+   <s3:case value="0">
+      ${h:aShowList[0]} is first working day
+    </s3:case>
+   <s3:case value="1">
+       ${h:aShowList[1]} is 2nd working day
+   </s3:case> 
+   <s3:case value="2"> 
+      ${h:aShowList[2]} is midweek
+   </s3:case> 
+   <s3:default> 
+   		 ${h:aShowList[aDay]}
+     </s3:default> 
+</s3:switch> 
+
